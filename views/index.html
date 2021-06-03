@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="head"></div>
+    <form action="/file" method="post" id="form" enctype="multipart/form-data">
+        <input type="file" id="image" name="userfile">
+    </form>
+    <button id="button">버튼</button>
+    <button id="button2">버튼2</button>
+    <script type="text/javascript">
+        // const head = document.querySelector('#head')
+        // const img = document.createElement('img')
+        // img.setAttribute('src','http://localhost:3000/elephant.jpg')
+        // head.appendChild(img)
+        const button = document.querySelector('#button')
+        const button2 = document.querySelector('#button2')
+        button.addEventListener('click',buttonFn)
+        function buttonFn(){
+            const image = document.querySelector('#image')
+            const form = document.querySelector('#form')
+            form.submit()
+        }
+        button2.addEventListener('click',button2Fn)
+        function button2Fn(){
+            const head = document.querySelector('#head')
+            const image = document.createElement('img')
+            image.setAttribute('src','http://localhost:3000/elephant.jpg')
+            head.appendChild(image)
+        }
+    </script>
+</body>
+</html>
