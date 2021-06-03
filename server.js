@@ -26,7 +26,7 @@ app.get('/',(req,res)=>{
     res.render('index')
 })
 
-app.post('/file',upload.single('userfile'),(req,res)=>{
+app.post('/file',upload.single('usefile'),(req,res)=>{
     // res.redirect('/')
 })
 
