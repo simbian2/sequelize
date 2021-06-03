@@ -20,9 +20,12 @@
         // head.appendChild(img)
         const button = document.querySelector('#button')
         const button2 = document.querySelector('#button2')
+        let imagename
         button.addEventListener('click',buttonFn)
         function buttonFn(){
             const image = document.querySelector('#image')
+            let split = image.value.split('\\')
+            imagename = split[split.length-1]
             const form = document.querySelector('#form')
             form.submit()
         }
@@ -30,7 +33,7 @@
         function button2Fn(){
             const head = document.querySelector('#head')
             const image = document.createElement('img')
-            image.setAttribute('src','http://localhost:3000/elephant.jpg')
+            image.setAttribute('src',`http://localhost:3000/${imagename}`)
             head.appendChild(image)
         }
     </script>

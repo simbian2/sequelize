@@ -27,7 +27,7 @@ app.get('/',(req,res)=>{
 })
 
 app.post('/file',upload.single('userfile'),(req,res)=>{
-    res.redirect('/')
+    // res.redirect('/')
 })
 
 app.listen(3000,()=>{
